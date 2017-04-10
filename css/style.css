@@ -1,0 +1,387 @@
+/* 
+    Created on : Apr 7, 2017, 10:16:51 AM
+    Author     : TongHoa
+*/
+
+@import "animate.min.css";
+@import "font-awesome.min.css";
+@import "bootstrap.min.css";
+
+body {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -o-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    color: #03050c;
+    background: #fff;
+    font-family: '小塚ゴシック Pr6N', 'Kozuka Gothic Pr6N', "YuGothic", "游ゴシック", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 1;
+}
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+}
+a {
+    color: #000;
+    -webkit-text-decoration-skip: objects;
+    background-color: transparent;
+    outline: none;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+ul {
+    list-style-type: none;
+}
+/*------------------------------------*\
+    MENU & LOGO
+\*------------------------------------*/
+header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: 100%;
+    max-width: 1060px;
+    height: 80px;
+    z-index: 99;
+}
+#logo {
+    width: 50%;
+}
+#logo img {
+    width: 100%;
+    height: auto;
+}
+.gnav-area > li {
+    list-style: none;
+}
+.gnav-area > li > a {
+    display: block;
+    padding: 20px 0;
+    color: #03050c;
+    text-align: left;
+    -webkit-transform: scale(0.9, 1);
+    -ms-transform: scale(0.9, 1);
+    transform: scale(0.9, 1);
+}
+.gnav-area > li > a:hover {
+    text-decoration: none;
+}
+.gnav-area > li.contact {
+    background: #f1be59;
+}
+.gnav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background-color: rgba(3,5,12,0.6);
+    z-index: 99;
+}
+.gnav-area > li .dropdown-menu {
+    padding-top: 0;
+    margin-top: 0;
+}
+.gnav-area > li.dropdown:hover > ul,
+.gnav-area > li.dropdown:focus > ul {
+    display: block;
+    transition-duration: .6s;
+}
+.dropdown-menu li {
+    padding: 4px 0;
+    margin: 0 4px;
+}
+.dropdown-menu li a {
+    color: #151e49;
+}
+.dropdown-menu li:not(:last-child) {
+    border-bottom: 1px solid #151e49;
+}
+.scroll-down {
+    display: block;
+    bottom: 60px;
+    top: auto;
+    margin: auto;
+    width: 40px;
+    height: 20px;
+    z-index: 1;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+.scroll-down i {
+    color: #fff;
+    transition: margin-top .3s ease;
+}
+.scroll-down i:hover {
+    margin-top: 10px;
+}
+/*------------------------------------*\
+    VIDEO & BANNER & SLIDER
+\*------------------------------------*/
+#header-banner {
+    height: 660px;
+    overflow: hidden;
+    position: relative;    
+}
+#header-banner .top-movie video {
+    width: 100%;
+    height: 100vh;
+    min-width: 100%;
+    min-height: 100vh;
+    background: #000;
+    object-position: center center;
+    object-fit: cover;
+    z-index: -1;
+}
+#header-banner .top-movie img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    width: auto;
+    height: 100%;
+    z-index: -1;
+}
+#cont-top-main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.top-slider {
+    opacity: 0;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    color: #fff;
+    z-index: 2;
+    text-align: center;
+}
+
+.top-slider li {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+.top-slider h2 {
+    margin-bottom: 20px;
+    color: #fff;
+    -webkit-transform: scale(0.9, 1);
+    -ms-transform: scale(0.9, 1);
+    transform: scale(0.9, 1); 
+    line-height: 1.4;
+}
+
+.top-slider li.active {
+    opacity: 1;
+    z-index: 2; 
+}
+.movie-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(21,30,73,.3);
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (min-width:1024px) {
+    header {
+        top: 30px;
+        background: #151e49;    
+    }
+    #header-banner .top-movie img {
+        display: none;
+    }
+    #logo {
+        width: 27%;
+        height: auto;
+        margin: 0 0 0 30px;
+        line-height: 80px;
+    }
+    .gnav-area {
+        padding: 0;
+        margin: 0;
+        float: right;
+    }
+    .gnav-area > li > a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        letter-spacing: .06em;
+        line-height: 80px;
+        text-align: center;
+    }
+    .gnav-area > li > a:hover {
+        background: transparent;
+        color: #f1be59;
+    }
+    .gnav-area > li:last-child > a:hover {
+        color: #fff;
+    }
+    .gnav-area > li {
+        padding: 0 18px;
+        display: inline-block;
+        position: relative;
+    }
+    .gnav-area > li:not(:first-child)::before {
+        content: '';
+        background: #fff;
+        width: 20px;
+        height: 1px;
+        display: block;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: 38px;
+        left: -12px;
+    }
+    .gnav-area > li:last-child::before {
+        display: none;
+    }
+    .gnav-area > li.contact > a:after {
+        position: absolute;
+        right: -10px;
+        display: inline-block;
+        opacity: 0;
+        content: '\f105';
+        font-size: 2rem;
+        font-family: 'Fontawesome';
+        color: #fff;
+        transition: all .3s ease;
+    }
+    .gnav-area > li.contact:hover > a:after {
+        opacity: 1;
+        right: -18px;
+    }
+    .gnav-area > li.dropdown a:after {
+        content: '';
+        border-left: 6px solid transparent;
+        border-top: 8px solid #fff;
+        border-bottom: 2px solid transparent;
+        border-right: 6px solid transparent;
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 26px;
+        transition: all .3s ease;
+    }
+    .gnav-area > li.dropdown > a:hover:after {
+        border-top: 8px solid #f1be59;
+        transform: rotate(180deg);
+    }
+}
+@media only screen and (max-width:1023px) {
+    .gnav-btn {
+        text-align: right;
+        display: block;
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        top: 1%;
+        right: 2%;
+        z-index: 9999;
+        cursor: pointer;
+    }
+    .gnav-btn span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 30px;
+        height: 3px;
+        margin: -1px 0 0 -12px;
+        background: #f1be59;
+        transition: .2s;
+    }
+    .gnav-btn span:before,
+    .gnav-btn span:after {
+        display: block;
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 30px;
+        height: 3px;
+        background: #f1be59;
+        transition: .3s;
+    }
+    .gnav-btn span:before {
+        margin-top: -12px;
+    }
+    .gnav-btn span:after {
+        margin-top: 8px;
+    }
+    .gnav-open .gnav-btn span {
+        background: transparent;
+    }
+    .gnav-open .gnav-btn span:before,
+    .gnav-open .gnav-btn span:after{
+        margin-top: 0;
+    }
+    .gnav-open .gnav-btn span:before{
+        transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+    }
+    .gnav-open .gnav-btn span:after{
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+    }
+    .gnav-area {
+        padding: 0 20px;
+    }
+    #mainmenu {
+        position: fixed;
+        width: 270px;
+        height: 100vh;
+        top: 0;
+        right: -270px;
+        padding: 30px 0;
+        background: #fff;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 101;
+    }
+    .top-movie {
+        height: 440px;
+        width: auto;
+        overflow: hidden;
+        position: relative;
+    }
+    #header-banner .top-movie img {
+        display: block;
+    }
+    #header-banner .top-movie video {
+        display: none;
+    }
+}
+@media only screen and (max-width:768px) {
+
+}
+@media only screen and (max-width:480px) {
+    #logo {
+        width: 70%;
+    }
+}
