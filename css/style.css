@@ -35,9 +35,71 @@ a {
     text-decoration: none;
     transition: all .4s ease;
 }
+a:hover {
+    color: #f1be59;
+}
 ul {
     list-style-type: none;
 }
+h2 {
+    margin-bottom: 2em;
+    font-size: 3.2rem;
+    font-weight: 800;
+    font-family: 'Oswald', '小塚ゴシック Pr6N', 'Kozuka Gothic Pr6N', "YuGothic", "游ゴシック", "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, sans-serif;
+    letter-spacing: 0.14em;
+    line-height: 1.625;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: 50px;
+    color: #151e49;
+    font-size: 3rem;
+    font-weight: normal;
+    letter-spacing: .04em;
+}
+h2 span {
+    display: block;
+    font-size: 1.6rem;
+    letter-spacing: .14em;
+    -webkit-transform: scale(0.9, 1);
+    -ms-transform: scale(0.9, 1);
+    transform: scale(0.9, 1);
+
+}
+h2 span:before {
+    display: block;
+    content: '';
+    width: 185px;
+    height: 2px;
+    margin: 6px auto;
+    background: #151e49;
+}
+.bg-section {
+    background: #151e49;
+    color: #fff;
+}
+.bg-section h2 {
+    color: #fff;
+}
+.bg-section h2 span:before {
+    background: #fff;
+}
+.flex-container img {
+    width: 100%;
+    height: auto;
+}
+.column {
+    padding: 40px 0;
+}
+.column img {
+    transition: opacity .3s ease;
+}
+.column a:hover img {
+    opacity: 0.7;
+}
+
 /*------------------------------------*\
     MENU & LOGO
 \*------------------------------------*/
@@ -200,6 +262,205 @@ header {
     background: rgba(21,30,73,.3);
 }
 
+/*------------------------------------*\
+    ABOUT
+\*------------------------------------*/
+.about-desc {
+    padding: 30px 0 50px;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.85;
+    letter-spacing: .14em;
+    -webkit-transform: scale(0.9, 1);
+    -ms-transform: scale(0.9, 1);
+    transform: scale(0.9, 1);
+}
+.about-panel li {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transition: all .3s cubic-bezier(0, 0, 0.38, 1);
+}
+.about-panel li:nth-child(even) {
+    background: #f3eeeb;
+}
+.about-panel img {
+    padding: 0 80px 10px;
+}
+.about-panel li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 20px 2%;
+    text-align: center;
+    text-decoration: none;
+}
+.about-panel li p {
+    margin-top: 20px;
+    color: #03050c;
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1.5;
+    -webkit-transform: scale(0.9, 1);
+    -ms-transform: scale(0.9, 1);
+    transform: scale(0.9, 1);
+}
+.about-panel li:hover {
+    top: -5px;
+    left: -5px;
+}
+/*------------------------------------*\
+    SERVICE
+\*------------------------------------*/
+.service-panel {
+    padding: 0;
+    margin: 0;
+}
+.service-panel > li {
+    position: relative;
+    overflow: hidden;
+}
+.service-panel .col-lg-4 , .service-panel .col-md-4, .service-panel .col-sm-4, .service-panel .col-xs-4, .service-panel .row, #service .container-fluid {
+    padding-left:0px;
+    padding-right:0px;
+}
+.hotspot-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.2s ease;
+    background: rgba(0, 0, 0, 0.55);
+    color: #fff;
+    top: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: .8;
+}  
+.service-panel > li:hover .hotspot-text {
+    bottom: 0;
+    left:0;
+    right:0;
+    background: rgba(0, 0, 0, 0.88);
+}
+.service-panel > li img {
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.service-panel > li:hover img {
+    -webkit-transform:scale(1.2);
+    transform:scale(1.2);
+}
+.service-panel > li:hover .hotspot-text {
+    opacity: 1;
+}
+/*------------------------------------*\
+    CASE
+\*------------------------------------*/
+.owl-carousel {
+
+}
+.owl-nav .owl-prev, .owl-nav .owl-next {
+    position: absolute;
+    top: 0;
+    background: #FFF;
+    -webkit-transition: opacity 0.25s linear;
+    -moz-transition: opacity 0.25s linear;
+    -o-transition: opacity 0.25s linear;
+    transition: opacity 0.25s linear;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    font-size: 32px;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.owl-nav .owl-prev {
+    left: 0;
+}
+.owl-nav .owl-next {
+    right: 0;
+}
+.owl-carousel:hover .owl-prev,
+.owl-carousel:hover .owl-next {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+.entry-content {
+    position: relative;
+    overflow: hidden;    
+}
+.entry-content * {
+    -webkit-backface-visibility: hidden;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -ms-transition: all ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.entry-title {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.2s ease;
+    background: rgba(0, 0, 0, 0.42);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+#case-list .entry-content:hover img {
+    transform: scale(1.12);
+    -ms-transform: scale(1.12); /* Cho IE9 */
+   -webkit-transform: scale(1.12); /* Chrome và Safari */
+   -moz-transform: scale(1.12); /* Firefox */
+   -o-transform: scale(1.12); /* Opera */
+}
+#case-list .entry-content:hover .entry-title {
+    background: rgba(0, 0, 0, 0.69);
+}
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/
+footer {
+    margin-top: 2em;
+    font-size: 1em;
+}
+footer p {
+    line-height: 1.6;
+}
+footer .panel {
+    background: transparent;
+}
+footer a {
+    color: #fff;
+    font-size: 0.8em;
+}
+footer .panel-heading {
+    position: relative;
+}
+footer .panel-heading:after {
+    content: '';
+    border: 1px solid #fff;
+    position: absolute;
+    bottom: 0;
+    left: 18px;
+    width: 40px;
+}
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
@@ -375,6 +636,31 @@ header {
     }
     #header-banner .top-movie video {
         display: none;
+    }
+}
+@media only screen and (min-width:768px) {
+    .top-section {
+        padding: 50px 0;
+    }
+    .br_sp {
+        display: none;
+    }
+    .about-desc {
+        padding: 50px 0;
+        font-size: 2.8rem;
+    }
+    .flex-container {
+        display: flex;
+        display: -webkit-flex; /* Safari */
+    }
+    .about-panel img {
+        padding: 30px;
+    }
+    footer {
+        padding: 3em 0 1em;
+    }
+    .footer-list li {
+        
     }
 }
 @media only screen and (max-width:768px) {

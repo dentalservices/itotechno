@@ -62,4 +62,37 @@ jQuery(document).ready(function ($) {
         }, speed, 'linear');
         return false;
     });
+
+    $("#case-list").owlCarousel({
+        margin: 1,
+        loop: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        autoplayTimeout: 3000,
+        nav: true,
+        center: true,
+        fluidSpeed: 100,
+        items: 5,
+        dots: false,
+        navText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+        responsive: {
+            0: {
+                items: 1,
+                nav: true,
+            },
+            600: {
+                items: 2,
+            },
+            768: {
+                items: 3,
+            },
+            1024: {
+                items: 3,
+            },
+            1280: {
+                items: 5,
+            }
+        }
+    });
+
 });
